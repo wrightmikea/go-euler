@@ -222,3 +222,12 @@ func Euler1h(max int) (sum int) {
 }
 
 // ****************************************************************
+// algorithm from Rosetta Code
+func Euler1i(max int) (sum int) {
+	sum2 := func(d int) int {
+		n := (max - 1) / d
+		return d * n * (n + 1)
+	}
+	sum = (sum2(3) + sum2(5) - sum2(15)) / 2
+	return
+}

@@ -36,6 +36,9 @@ func TestEuler1g(t *testing.T) {
 func TestEuler1h(t *testing.T) {
 	runTestFuncWith1000(t, Euler1h)
 }
+func TestEuler1i(t *testing.T) {
+	runTestFuncWith1000(t, Euler1i)
+}
 
 func runTestFuncWith1000(t *testing.T, f func(int) int) {
 	actual := f(1000)
@@ -85,5 +88,10 @@ func BenchmarkEuler1g1000x(b *testing.B) {
 func BenchmarkEuler1h1000x(b *testing.B) {
 	for n := 0; n < 1000; n++ {
 		result = Euler1h(100000)
+	}
+}
+func BenchmarkEuler1i1000x(b *testing.B) {
+	for n := 0; n < 1000; n++ {
+		result = Euler1i(100000)
 	}
 }
